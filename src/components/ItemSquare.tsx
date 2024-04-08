@@ -5,6 +5,7 @@ interface Props {
   textWidthMd?: "md:text-3xl" | "md:text-2xl" | "md:text-sm" | "md:text-base";
   textWidthSm?: "text-lg" | "text-base" | "text-xs" | "text-sm";
   textFont?: "font-semibold" | "font-normal" | "font-light";
+  marginRight?:"mr-8" | "mr-0"
 }
 
 export const ItemSquare = ({
@@ -14,13 +15,14 @@ export const ItemSquare = ({
   textWidthMd = "md:text-3xl",
   textFont = "font-semibold",
   textWidthSm = "text-lg",
+  marginRight ="mr-0",
 }: Props) => {
   return (
     <div className="flex justify-center items-center gap-1">
       <div
         className={`${squareHeight} ${squareWidth} w-3 h-3 bg-primary`}
       ></div>
-      <h1 className={`${textWidthMd} ${textWidthSm} ${textFont} mr-8`}>
+      <h1 className={`${textWidthMd} ${textWidthSm} ${textFont} ${marginRight}`}>
         {label}
       </h1>
     </div>

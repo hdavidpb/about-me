@@ -1,6 +1,7 @@
 import { ItemSquare } from "@/components";
 import { AbilitiesAndLanguageSection } from "@/components/curriculum/AbilitiesAndLanguageSection";
 import { Section } from "@/components/curriculum/Section";
+import { CurriculumResponse } from "@/interfaces/curriculum.response.interface";
 import { ISection } from "@/interfaces/sections.interface";
 import { Metadata } from "next";
 
@@ -8,20 +9,32 @@ export const metadata:Metadata ={
   title:"Hernán Plaza | Curriculum"
 }
 
-const CurriculemPage = () => {
+
+const getCurriculum = async ():Promise<CurriculumResponse> => {
+ const API_URL = process.env.BACKEND_URL
+  const curriculum = await fetch(`${API_URL}/api/curriculum`,{next:{revalidate:60}}).then(res => res.json())
+  return curriculum as CurriculumResponse
+
+}
+
+
+
+export default async function CurriculemPage  ()  {
+  const data = await getCurriculum()
+ const curriculum = data
   return (
     <div className="w-full  flex flex-col justify-start items-center pt-28 bg-secondary pb-4">
       <div className="flex flex-col justify-start items-center lg:w-[48%] md:w-full p-2">
         <ItemSquare label="Currículum" />
-        <Section sections={experienceList} title="Experiencia" />
-        <Section sections={educationList} title="Educación" />
-        <AbilitiesAndLanguageSection />
+        <Section sections={curriculum.experience} title="Experiencia" />
+        <Section sections={curriculum.education} title="Educación" />
+        <AbilitiesAndLanguageSection abilities={curriculum.abilities} laguages={curriculum.languages} skills={curriculum.skills}/>
       </div>
     </div>
   );
 };
 
-export default CurriculemPage;
+
 
 const experienceList: ISection[] = [
   {

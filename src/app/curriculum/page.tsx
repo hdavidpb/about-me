@@ -12,7 +12,7 @@ export const metadata:Metadata ={
 
 const getCurriculum = async ():Promise<CurriculumResponse> => {
  const API_URL = process.env.BACKEND_URL
-  const curriculum = await fetch(`${API_URL}/api/curriculum`,{next:{revalidate:60}}).then(res => res.json())
+  const curriculum = await fetch(`${API_URL}/curriculum`,{next:{revalidate:60}}).then(res => res.json())
   return curriculum as CurriculumResponse
 
 }

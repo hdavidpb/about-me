@@ -32,12 +32,14 @@ export default async function RootLayout({
 
   const aboutData = await getAboutMeData()
 
+  console.log("DATA: ",aboutData)
+
   return (
     <html lang="es">
       <body className={inter.className}>
-        <Navbar name={aboutData.name} profetion={aboutData.profetion}/>
+        {/* <Navbar name={aboutData.name} profetion={aboutData.profetion}/> */}
         {children}
-        <Footer links={aboutData.footerLinks}/>
+        {/* <Footer links={aboutData.footerLinks}/> */}
       </body>
     </html>
   );

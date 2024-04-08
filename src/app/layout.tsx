@@ -30,9 +30,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const aboutData = await getAboutMeData()
+  // const aboutData = await getAboutMeData()
 
-  console.log("DATA: ",aboutData)
+  // console.log("DATA: ",aboutData)
 
   return (
     <html lang="es">

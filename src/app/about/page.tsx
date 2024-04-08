@@ -14,8 +14,8 @@ async function getAboutMeData ():Promise<AboutMeResponse>{
 
 export default async function AboutPage() {
 
-  const aboutMeData = await getAboutMeData()
-console.log(aboutMeData)
+//   const aboutMeData = await getAboutMeData()
+// console.log(aboutMeData)
    return (
     <section className="w-full md:h-[80vh] flex md:justify-center justify-end items-center relative md:flex-row flex-col-reverse">
    <h1>ABOUT</h1>

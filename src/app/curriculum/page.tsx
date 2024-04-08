@@ -10,25 +10,25 @@ export const metadata:Metadata ={
 }
 
 
-// const getCurriculum = async ():Promise<CurriculumResponse> => {
-//  const API_URL = process.env.BACKEND_URL
-//   const curriculum = await fetch(`${API_URL}/curriculum`,{next:{revalidate:60}}).then(res => res.json())
-//   return curriculum as CurriculumResponse
+const getCurriculum = async ():Promise<CurriculumResponse> => {
+ const API_URL = process.env.BACKEND_URL
+  const curriculum = await fetch(`${API_URL}/curriculum`,{next:{revalidate:60}}).then(res => res.json())
+  return curriculum as CurriculumResponse
 
-// }
+}
 
 
 
 export default async function CurriculemPage  ()  {
-  // const data = await getCurriculum()
-//  const curriculum = data
+  const data = await getCurriculum()
+ const curriculum = data
   return (
     <div className="w-full  flex flex-col justify-start items-center pt-28 bg-secondary pb-4">
       <div className="flex flex-col justify-start items-center lg:w-[48%] md:w-full p-2">
-        {/* <ItemSquare label="Currículum" />
+        <ItemSquare label="Currículum" />
         <Section sections={curriculum.experience} title="Experiencia" />
         <Section sections={curriculum.education} title="Educación" />
-        <AbilitiesAndLanguageSection abilities={curriculum.abilities} laguages={curriculum.languages} skills={curriculum.skills}/> */}
+        <AbilitiesAndLanguageSection abilities={curriculum.abilities} laguages={curriculum.languages} skills={curriculum.skills}/>
       </div>
     </div>
   );

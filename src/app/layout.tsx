@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   description: "Desarrollador frontend senior",
 };
 
-// async function getAboutMeData ():Promise<AboutMeResponse>{
-//   const API_URL = process.env.BACKEND_URL
-//   const data = await fetch(`${API_URL}/api/about`,{next:{revalidate:60}}).then(response => response.json())
+async function getAboutMeData ():Promise<AboutMeResponse>{
+  const API_URL = process.env.BACKEND_URL
+  const data = await fetch(`${API_URL}/api/about`,{next:{revalidate:60}}).then(response => response.json())
 
-//   return data as AboutMeResponse
+  return data as AboutMeResponse
   
 
-// }
+}
 
 export default async function RootLayout({
   children,
@@ -30,14 +30,14 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  // const aboutData = await getAboutMeData()
+  const aboutData = await getAboutMeData()
 
   return (
     <html lang="es">
       <body className={inter.className}>
-        {/* <Navbar name={aboutData.name} profetion={aboutData.profetion}/> */}
+        <Navbar name={aboutData.name} profetion={aboutData.profetion}/>
         {children}
-        {/* <Footer links={aboutData.footerLinks}/> */}
+        <Footer links={aboutData.footerLinks}/>
       </body>
     </html>
   );

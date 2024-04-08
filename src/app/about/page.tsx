@@ -3,22 +3,22 @@ import { AboutMeResponse, LinkData } from "@/interfaces/aboutme.response.interfa
 import Image from "next/image";
 import Link from "next/link";
 
-// async function getAboutMeData ():Promise<AboutMeResponse>{
-//   const API_URL = process.env.BACKEND_URL
-//   const data = await fetch(`${API_URL}/api/about`,{next:{revalidate:60}}).then(response => response.json())
+async function getAboutMeData ():Promise<AboutMeResponse>{
+  const API_URL = process.env.BACKEND_URL
+  const data = await fetch(`${API_URL}/api/about`,{next:{revalidate:60}}).then(response => response.json())
 
-//   return data as AboutMeResponse
+  return data as AboutMeResponse
   
 
-// }
+}
 
 export default async function AboutPage() {
 
-  // const aboutMeData = await getAboutMeData()
+  const aboutMeData = await getAboutMeData()
 
    return (
     <section className="w-full md:h-[80vh] flex md:justify-center justify-end items-center relative md:flex-row flex-col-reverse">
-      {/* <div className="w-full md:w-[40%] md:h-full bg-secondary">
+      <div className="w-full md:w-[40%] md:h-full bg-secondary">
         <div className="mt-[200px] md:hidden">
         <RightCardInfo description={aboutMeData.description} />
         </div>
@@ -30,7 +30,7 @@ export default async function AboutPage() {
       <div className="hidden w-[750px] h-[500px] md:flex justify-center items-center absolute bg-white">
       <LeftCardInfo name={aboutMeData.name} profetion={aboutMeData.profetion} profileImage={aboutMeData.profileImage} links={aboutMeData.links} />
         <RightCardInfo description={aboutMeData.description} />
-      </div> */}
+      </div>
     </section>
   );
 };

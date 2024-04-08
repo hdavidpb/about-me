@@ -15,10 +15,11 @@ async function getAboutMeData ():Promise<AboutMeResponse>{
 export default async function AboutPage() {
 
   const aboutMeData = await getAboutMeData()
-
+console.log(aboutMeData)
    return (
     <section className="w-full md:h-[80vh] flex md:justify-center justify-end items-center relative md:flex-row flex-col-reverse">
-      <div className="w-full md:w-[40%] md:h-full bg-secondary">
+   <h1>ABOUT</h1>
+      {/* <div className="w-full md:w-[40%] md:h-full bg-secondary">
         <div className="mt-[200px] md:hidden">
         <RightCardInfo description={aboutMeData.description} />
         </div>
@@ -30,7 +31,7 @@ export default async function AboutPage() {
       <div className="hidden w-[750px] h-[500px] md:flex justify-center items-center absolute bg-white">
       <LeftCardInfo name={aboutMeData.name} profetion={aboutMeData.profetion} profileImage={aboutMeData.profileImage} links={aboutMeData.links} />
         <RightCardInfo description={aboutMeData.description} />
-      </div>
+      </div> */}
     </section>
   );
 };

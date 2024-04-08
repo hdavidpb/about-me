@@ -13,7 +13,7 @@ export const Footer = ({links}:Props) => {
       </div>
       <div className=" flex-1 flex justify-end items-center gap-6 text-xs md:text-sm flex-col md:flex-row order-1 md:order-2">
         {links.map((link) => (
-          <div className="flex justify-center items-center gap-1">
+          <div key={link._id} className="flex justify-center items-center gap-1">
             <GenerateIcon urlType={link.urlType} />
             <span> {link.url}</span>
           </div>

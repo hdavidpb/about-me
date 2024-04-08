@@ -61,7 +61,7 @@ function LeftCardInfo ({name,profetion,profileImage,links}:LeftCardProps){
     </div>
     <div className="w-full h-[50px] flex justify-center items-center gap-3 bg-white">
       {links.map(link => (
-        <a href={link.url} target="_blank">
+        <a key={link._id} href={link.url} target="_blank">
           <GenerateIcon key={link._id} urlType={link.urlType}/>
         </a>
       ))}

@@ -1,7 +1,8 @@
-import { redirect } from "next/navigation";
 
 export default function Home() {
 
-  redirect("/about")
+ <div>
+  <h1>Backend about me</h1>
+ </div>
 
 }

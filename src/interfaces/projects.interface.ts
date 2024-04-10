@@ -9,5 +9,6 @@ export interface ProjectList {
     subtitle:    string;
     description: string;
     image:       string;
+    linkUrl:     string;
     _id:         string;
 }

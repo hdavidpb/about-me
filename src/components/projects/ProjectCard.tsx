@@ -22,9 +22,9 @@ export const ProjectCard = ({project}:Props) => {
         <p>{project.description}</p>
       </div>
     </div>
-    <div className="w-full md:w-[340px] h-full">
+    <a href={project.linkUrl} target="_blank" className="w-full md:w-[340px] h-full">
       <Image width={340} height={400} src={project.image} alt={`Imagen proyecto - ${project.title}`} className="w-full h-full object-contain transition-all ease-in-out duration-300 hover:scale-105 hover:rotate-3 cursor-pointer"/>
-    </div>
+    </a>
   </div>
   )
 }

@@ -13,6 +13,7 @@ const ProjectSchema = new mongoose.Schema({
         default:"",
     },
     image:String,
+    linkUrl:String
   }]
 })
 

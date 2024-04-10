@@ -18,16 +18,16 @@ export default async function AboutPage() {
 
    return (
     <section className="w-full md:h-[80vh] flex md:justify-center justify-end items-center relative md:flex-row flex-col-reverse">
-      <div className="w-full md:w-[40%] md:h-full bg-secondary">
+      <div className="w-full md:w-[40%] md:h-full bg-secondary ">
         <div className="mt-[200px] md:hidden">
         <RightCardInfo description={aboutMeData.description} />
         </div>
       </div>
       <div className="w-full md:flex-1 md:h-full h-[230px]"></div>
-      <div className="absolute md:hidden block mt-7 w-[94%]">
+      <div className="absolute md:hidden block mt-7 w-[94%] ">
         <LeftCardInfo name={aboutMeData.name} profetion={aboutMeData.profetion} profileImage={aboutMeData.profileImage} links={aboutMeData.links} />
       </div>
-      <div className="hidden w-[750px] h-[500px] md:flex justify-center items-center absolute bg-white">
+      <div className="hidden w-[750px] h-[500px] md:flex justify-center items-center absolute bg-white rounded-tl-3xl rounded-bl-3xl rounded-tr-3xl md:rounded-tr-0 rounded-br-3xl shadow-xl ">
       <LeftCardInfo name={aboutMeData.name} profetion={aboutMeData.profetion} profileImage={aboutMeData.profileImage} links={aboutMeData.links} />
         <RightCardInfo description={aboutMeData.description} />
       </div>
@@ -45,7 +45,7 @@ interface LeftCardProps{
 
 function LeftCardInfo ({name,profetion,profileImage,links}:LeftCardProps){
   return (
-    <div className="md:w-[40%] md:h-full h-auto flex flex-col justify-start items-center bg-[#F4ECE6] shadow-2xl ">
+    <div className="md:w-[40%] md:h-full h-auto flex flex-col justify-start items-center bg-[#F4ECE6] shadow-2xl rounded-tl-3xl rounded-bl-3xl rounded-tr-3xl md:rounded-tr-none rounded-br-3xl md:rounded-br-none">
     <div className="w-full flex-1 flex flex-col justify-around items-center p-9">
       <Image
         width={150}
@@ -59,7 +59,7 @@ function LeftCardInfo ({name,profetion,profileImage,links}:LeftCardProps){
       <div className="w-[80px] h-[2px] bg-primary"></div>
       <h2 className="text-center tracking-[6px]">{profetion}</h2>
     </div>
-    <div className="w-full h-[50px] flex justify-center items-center gap-3 bg-white">
+    <div className="w-full h-[50px] flex justify-center items-center gap-3 bg-white rounded-bl-3xl rounded-br-3xl md:rounded-br-none">
       {links.map(link => (
         <a key={link._id} href={link.url} target="_blank">
           <GenerateIcon key={link._id} urlType={link.urlType}/>

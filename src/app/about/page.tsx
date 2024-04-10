@@ -91,7 +91,7 @@ function RightCardInfo({description}:RightCardProps) {
           CURRICULUM
         </Link>
         <Link
-          href="/curriculum"
+          href="/proyectos"
           className="bg-white border border-black px-5 py-1 rounded-2xl transition-all ease-in-out duration-300 hover:text-primary hover:border-primary"
         >
           PROYECTOS

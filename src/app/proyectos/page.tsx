@@ -19,7 +19,7 @@ export default async function ProyectosPage ()  {
       <div className="flex flex-col justify-start items-center lg:w-[48%] md:w-full p-2">
         <ItemSquare label="Proyectos" />
         {projects.projectList.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard key={project._id} project={project} />
         ))}
       </div>
     </div>

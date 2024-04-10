@@ -18,7 +18,7 @@ export const ProjectCard = ({project}:Props) => {
           <span className="text-base font-semibold">{project.subtitle}</span>
         </div>
       </div>
-      <div className="flex-auto md:flex-1 h-[200px]  w-full overflow-y-auto p-7">
+      <div className="flex-auto md:flex-1 max-h-[200px]  w-full overflow-y-auto p-7">
         <p>{project.description}</p>
       </div>
     </div>

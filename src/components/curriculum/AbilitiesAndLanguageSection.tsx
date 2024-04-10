@@ -9,7 +9,7 @@ interface Props{
 export const AbilitiesAndLanguageSection = ({abilities,laguages,skills}:Props) => {
   console.log("HABILIDADES: ",abilities)
   return (
-    <div className="w-full  bg-white flex flex-col justify-start items-start gap-24 py-11 px-14 mt-8 ">
+    <div className="w-full  bg-white flex flex-col justify-start items-start gap-24 py-11 px-14 mt-8 rounded-xl">
         <div className="w-full flex flex-col justify-start items-start gap-6">
         <h2 className="text-3xl self-start font-semibold">Habilidades profesionales</h2>
         <div className="flex justify-start items-center gap-2 flex-wrap">

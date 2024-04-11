@@ -85,20 +85,14 @@ function RightCardInfo({description}:RightCardProps) {
       </h5>
       <div className="flex justify-start items-center gap-2 mt-7 text-sm flex-wrap">
         <Link
-          href="/curriculum"
+          href="/agendar-consulta"
           className="bg-primary text-white px-5 py-1 rounded-2xl border border-primary transition-colors ease-in-out duration-300 hover:bg-white hover:text-primary"
         >
-          CURRICULUM
-        </Link>
-        <Link
-          href="/proyectos"
-          className="bg-white border border-black px-5 py-1 rounded-2xl transition-all ease-in-out duration-300 hover:text-primary hover:border-primary"
-        >
-          PROYECTOS
+          Agendar consulta
         </Link>
       </div>
       {description && (
-        <p className="font-normal mt-10 text-pretty text-ellipsis overflow-y-auto">
+        <p className="font-normal mt-10 text-pretty text-ellipsis overflow-y-auto whitespace-break-spaces">
           {description}
         </p>
       )}

@@ -12,8 +12,8 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Hernan Plaza | Desarrollador",
-  description: "Desarrollador frontend senior",
+  title: "Claudia Arango | Nutricionista",
+  description: "Nutricionista de Cali Colombia",
 };
 
 async function getAboutMeData ():Promise<AboutMeResponse>{
@@ -35,7 +35,7 @@ export default async function RootLayout({
 
   return (
     <html lang="es">
-      <head>
+      {/* <head>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-JBDFH7YNNK"
@@ -47,7 +47,7 @@ export default async function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-JBDFH7YNNK');`}
         </Script>
-      </head>
+      </head> */}
       <body className={inter.className}>
         <Navbar name={aboutData.name} profetion={aboutData.profetion} />
         {children}

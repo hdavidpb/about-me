@@ -1,7 +1,7 @@
 
 const ContactPage = () => {
   return (
-    <div>ContactPage</div>
+    <div>No disponible</div>
   )
 }
 

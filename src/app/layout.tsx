@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Footer, Navbar } from "@/components";
 import { AboutMeResponse } from "@/interfaces/aboutme.response.interface";
+import Script from "next/script";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -34,10 +35,23 @@ export default async function RootLayout({
 
   return (
     <html lang="es">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-JBDFH7YNNK"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JBDFH7YNNK');`}
+        </Script>
+      </head>
       <body className={inter.className}>
-        <Navbar name={aboutData.name} profetion={aboutData.profetion}/>
+        <Navbar name={aboutData.name} profetion={aboutData.profetion} />
         {children}
-        <Footer links={aboutData.footerLinks}/>
+        <Footer links={aboutData.footerLinks} />
       </body>
     </html>
   );

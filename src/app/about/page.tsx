@@ -81,12 +81,12 @@ function RightCardInfo({description}:RightCardProps) {
     <div className="flex-1 h-full flex flex-col justify-start items-start px-5 pt-7 pb-2">
       <h1 className="md:text-7xl text-4xl font-semibold">HOLA</h1>
       <h5 className="md:text-2xl text-base mt-7">
-        Esto es lo que soy y lo que hago.
+        Un poco sobre mí
       </h5>
       <div className="flex justify-start items-center gap-2 mt-7 text-sm flex-wrap">
         <Link
           href="/agendar-consulta"
-          className="bg-primary text-white px-5 py-1 rounded-2xl border border-primary transition-colors ease-in-out duration-300 hover:bg-white hover:text-primary"
+          className="shadow-[1px_1px_0_0_#00000087] bg-primary text-white px-5 py-1 rounded-2xl border border-primary transition-colors ease-in-out duration-300 hover:bg-white hover:text-primary"
         >
           Agendar consulta
         </Link>

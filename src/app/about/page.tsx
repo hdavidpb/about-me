@@ -56,7 +56,7 @@ function LeftCardInfo ({name,profetion,profileImage,links}:LeftCardProps){
         priority
       />
       <h1 className="text-4xl whitespace-break-spaces text-center">{name}</h1>
-      <div className="w-[80px] h-[2px] bg-primary"></div>
+      <div className="w-[80px] h-[2px] bg-primary my-4 md:my-0"></div>
       <h2 className="text-center tracking-[6px]">{profetion}</h2>
     </div>
     <div className="w-full h-[50px] flex justify-center items-center gap-3 bg-white rounded-bl-3xl rounded-br-3xl md:rounded-br-none">
@@ -92,7 +92,7 @@ function RightCardInfo({description}:RightCardProps) {
         </Link>
       </div>
       {description && (
-        <p className="font-normal mt-10 text-pretty text-ellipsis overflow-y-auto whitespace-break-spaces">
+        <p className="font-normal mt-10 text-pretty text-ellipsis overflow-y-auto whitespace-break-spaces pb-5 md:pb-0">
           {description}
         </p>
       )}

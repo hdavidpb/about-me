@@ -15,11 +15,16 @@ return NextResponse.json(curriculum)
 
 export async function POST (request: Request){
     await connectDB()
+    const _id =  process.env.AUTHOR_ID
     const body = await request.json()
-
-    const curriculum = await Curriculum.create(body)
-
-    return NextResponse.json(curriculum,{status:200})
+    const curriculumById =await Curriculum.findById(_id)
+   if(curriculumById !==null){
+        await Curriculum.updateOne({_id},{$set:body})
+       return NextResponse.json({message:"Curriculum actualizado de manera exitosa"})
+   }else{
+   const curriculum = await Curriculum.create(body)
+   return NextResponse.json({message:"Curriculum creado de manera exitosa",curriculum})
+   }
 
 }
 

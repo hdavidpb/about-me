@@ -14,6 +14,7 @@ const inter = Poppins({
 export const metadata: Metadata = {
   title: "Hernan Plaza | Desarrollador",
   description: "Desarrollador frontend senior",
+  keywords:["Developer","Desarrollador","Front-end","Frontend","React.js","Next.js","Ingeniero","Senior"]
 };
 
 async function getAboutMeData ():Promise<AboutMeResponse>{

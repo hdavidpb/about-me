@@ -48,6 +48,12 @@ export default async function RootLayout({
             gtag('config', 'G-JBDFH7YNNK');`}
         </Script>
       </head> */}
+          <head>
+        <Script
+          async
+          src="https://checkout.bold.co/library/boldPaymentButton.js"
+        ></Script>
+      </head>
       <body className={inter.className}>
         <Navbar name={aboutData.name} profetion={aboutData.profetion} />
         {children}

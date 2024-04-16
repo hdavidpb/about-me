@@ -84,11 +84,17 @@ function RightCardInfo({description}:RightCardProps) {
         Un poco sobre mí
       </h5>
       <div className="flex justify-start items-center gap-2 mt-7 text-sm flex-wrap">
-        <Link
+        {/* <Link
           href="/agendar-consulta"
           className="shadow-[1px_1px_0_0_#00000087] bg-primary text-white px-5 py-1 rounded-2xl border border-primary transition-colors ease-in-out duration-300 hover:bg-white hover:text-primary"
         >
           Agendar consulta
+        </Link> */}
+        <Link
+          href="/servicios"
+          className="shadow-[1px_1px_0_0_#00000087] text-primary px-5 py-1 rounded-2xl border border-primary transition-colors ease-in-out duration-300 hover:bg-primary hover:text-white"
+        >
+        Consultas
         </Link>
       </div>
       {description && (

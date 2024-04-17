@@ -19,7 +19,7 @@ export default function CheckoutPage(){
     const d = get("d")!
 
 
-    useEffect(() =>{ if(isNaN(+atob(p))){ router.push("/servicios") } },[p])
+    useEffect(() =>{ if(isNaN(+atob(p))){ router.push("/servicios") } },[p,router])
 
         const handleCheckout = async ()=>{
             setLoading(true)

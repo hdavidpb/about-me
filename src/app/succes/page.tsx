@@ -24,7 +24,7 @@ export default function SuccesPage (){
         fetch("/api/orders",{method:"PUT",body:JSON.stringify({orderId})})
         .then(res => res.json())
         .then(res => setOrderData(res))
-    },[])
+    },[orderId])
 
   return (
     <section className="w-full min-h-[80vh] flex flex-col justify-start items-center p-4 overflow-y-auto bg-[#fbfcfd]">

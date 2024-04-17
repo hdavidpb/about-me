@@ -48,14 +48,15 @@ const Checkout = () => {
 
 
   return (
-    <div className="shadow-2xl w-[300px] flex flex-col justify-start items-center rounded-2xl pt-5 px-7 gap-7 bg-white">
+    <div className="shadow-2xl w-[95%]  md:w-[300px] flex flex-col justify-start items-center rounded-2xl pt-5 px-3 md:px-7 gap-7 bg-white">
     <form className="w-full flex flex-col justify-start items-center">
       <h1 className="text-sm text-center font-semibold">{`Estas a punto de adquirir una consulta de "${atob(d)}".`}</h1>
       <span className="text-xs text-center my-3">Por favor diligencia los siguientes datos para generar tu orden:</span>
       <select name="documentType" defaultValue={formValues.documentType.value} className="w-full border h-[40px] text-sm outline-none rounded-lg mb-1" onChange={(e)=>handleChange(e,"documentType")}>
-              <option value="C.C">C.C</option>
-              <option value="T.I">T.I</option>
-              <option value="P.P">P.P</option>
+              <option value="C.C">Cédulda de ciudadania</option>
+              <option value="T.I">Tarjeta de identidad</option>
+              <option value="P.P">Pasaporte</option>
+              <option value="P.E">Permiso especial</option>
           </select>
           <input min={1} type="number" onChange={(e)=>handleChange(e,"documentNumber")} name="documentNumber" placeholder="Número de identificación" className="w-full border h-[40px] px-2 text-sm outline-none rounded-lg"/>
     

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 async function getAboutMeData ():Promise<AboutMeResponse>{
-  const API_URL = process.env.BACKEND_URL
+  const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL
   const data = await fetch(`${API_URL}/api/about`,{next:{revalidate:60}}).then(response => response.json())
 
   return data as AboutMeResponse

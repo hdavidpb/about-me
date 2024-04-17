@@ -3,7 +3,7 @@ import { ServicesResponse } from "@/interfaces/services.interface";
 
 
 async function getServices (){
-    const API_URL = process.env.BACKEND_URL
+    const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL
     const services:ServicesResponse[] =  await fetch(`${API_URL}/api/services`,{next:{revalidate:60}}).then(response => response.json())
 
     return services 

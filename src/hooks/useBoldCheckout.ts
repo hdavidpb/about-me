@@ -43,7 +43,7 @@ export const useBoldCheckout = () => {
             currency,
             amount,
             apiKey:process.env.NEXT_PUBLIC_BOLD_IDENTITY_KEY,
-            redirectionUrl: "https://www.google.com/",
+            redirectionUrl: `${process.env.NEXT_PUBLIC_BACKEND_URL}/succes`,
             integritySignature,
             description,
            });

@@ -14,8 +14,7 @@ export const ServiceCard = ({ price, consultType, description }: Props) => {
 
 
   return (
-    <div className="shadow-2xl w-[300px] flex flex-col justify-start items-center rounded-2xl pt-14 pb-7 px-7 gap-7 bg-white">
-        
+    <div className="shadow-2xl w-[260px] md:w-[300px] flex flex-col justify-start items-center rounded-2xl pt-10 md:pt-14 pb-7 px-5  md:px-7 gap-3 md:gap-7 bg-white">
       <h2 className="text-base font-semibold text-center">
         {consultType}
       </h2>

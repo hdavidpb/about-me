@@ -52,13 +52,19 @@ const Checkout = () => {
     <form className="w-full flex flex-col justify-start items-center">
       <h1 className="text-sm text-center font-semibold">{`Estas a punto de adquirir una consulta de "${atob(d)}".`}</h1>
       <span className="text-xs text-center my-3">Por favor diligencia los siguientes datos para generar tu orden:</span>
-      <div className="w-full flex justify-start items-center   h-[40px] rounded-lg"> 
-      <select name="documentType" defaultValue={formValues.documentType.value} className="border h-full text-sm outline-none rounded-tl-lg rounded-bl-lg" onChange={(e)=>handleChange(e,"documentType")}>
+      <div className="w-full flex justify-start items-center h-[40px] rounded-lg"> 
+      <select name="documentType" defaultValue={formValues.documentType.value} className="w-[80px] border h-full text-sm outline-none rounded-tl-lg rounded-bl-lg" onChange={(e)=>handleChange(e,"documentType")}>
               <option value="C.C">C.C</option>
               <option value="T.I">T.I</option>
               <option value="P.P">P.P</option>
           </select>
-          <input min={1} type="number" onChange={(e)=>handleChange(e,"documentNumber")} name="documentNumber" placeholder="Número de identificación" className="flex-1 border h-full pl-2 text-sm outline-none rounded-tr-lg rounded-br-lg"/>
+          {/* <input list="documentsType" className="w-[] border h-full text-sm outline-none rounded-tl-lg rounded-bl-lg"></input>
+          <datalist id="documentsType">
+          <option value="C.C">C.C</option>
+            <option value="T.I">T.I</option>
+            <option value="P.P">P.P</option>
+          </datalist> */}
+          <input min={1} type="number" onChange={(e)=>handleChange(e,"documentNumber")} name="documentNumber" placeholder="Número de identificación" className="flex-1 border h-full px-2 text-sm outline-none rounded-tr-lg rounded-br-lg"/>
       </div>
       <input name="name" placeholder="Nombre completo" className="border h-[40px] pl-2 text-sm w-full outline-none my-4 rounded-lg" onChange={(e)=>handleChange(e,"name")}/>
      <button disabled={!formValues.documentNumber.value.trim() || !formValues.name.value.trim()} onClick={handleCheckout} type="button" className="w-[190px] h-[40px] flex justify-center items-center bg-primary text-white text-sm border  rounded-full px-3 py-2 mt-3 disabled:opacity-55 disabled:cursor-not-allowed">

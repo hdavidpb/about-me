@@ -48,7 +48,7 @@ const Checkout = () => {
 
 
   return (
-    <div className="shadow-2xl w-[95%]  md:w-[300px] flex flex-col justify-start items-center rounded-2xl pt-5 px-3 md:px-7 gap-7 bg-white">
+    <div className="shadow-2xl w-[95%]  md:w-[350px] flex flex-col justify-start items-center rounded-2xl pt-5 px-3 md:px-7 gap-7 bg-white">
     <form className="w-full flex flex-col justify-start items-center">
       <h1 className="text-sm text-center font-semibold">{`Estas a punto de adquirir una consulta de "${atob(d)}".`}</h1>
       <span className="text-xs text-center my-3">Por favor diligencia los siguientes datos para generar tu orden:</span>

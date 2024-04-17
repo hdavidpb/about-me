@@ -4,7 +4,6 @@ interface Props{
     orderId:string,
     currency:string,
     amount:string,
-    apiKey:string,
     integritySignature:string,
     description:string
 }
@@ -37,14 +36,14 @@ export const useBoldCheckout = () => {
      //@ts-ignore
     
 
-     const checkout = ({amount,apiKey,currency,description,integritySignature,orderId}:Props) => {
+     const checkout = ({amount,currency,description,integritySignature,orderId}:Props) => {
         //@ts-ignore
         const checkoutInstance = new BoldCheckout({
             orderId,
             currency,
             amount,
-            apiKey,
-            redirectionUrl: "https://claudiaarango.vercel.app",
+            apiKey:process.env.NEXT_PUBLIC_BOLD_IDENTITY_KEY,
+            redirectionUrl: "https://www.google.com/",
             integritySignature,
             description,
            });

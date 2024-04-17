@@ -14,4 +14,4 @@ export const NavItems = () => {
   );
 };
 
-const links = [ { label: "SOBRE MÍ", href: "/about", }, { label: "AGENDAR CONSULTA", href: "/agendar-consulta"} ];
+const links = [ { label: "SOBRE MÍ", href: "/about", }, { label: "CONSULTAS", href: "/servicios"} ];

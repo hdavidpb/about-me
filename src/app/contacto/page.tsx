@@ -1,8 +1,9 @@
+import { redirect } from "next/navigation"
 
 const ContactPage = () => {
-  return (
-    <div>No disponible</div>
-  )
+
+  redirect("/about")
+
 }
 
 export default ContactPage

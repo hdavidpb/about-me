@@ -6,7 +6,7 @@ import { BoldStatusResponse } from "@/interfaces/boldstatusresponse.interface";
 import { PaymentStatus } from "@/interfaces/transactions.interface";
 import Link from "next/link";
 import { redirect, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 export default function SuccesPage (){
     const [orderData,setOrderData] = useState<BoldStatusResponse | null>(null)
@@ -27,7 +27,8 @@ export default function SuccesPage (){
     },[orderId])
 
   return (
-    <section className="w-full min-h-[80vh] flex flex-col justify-start items-center p-4 overflow-y-auto bg-[#fbfcfd]">
+    <Suspense fallback={<Spinner width="w-8 h-8"/>}>
+  <section className="w-full min-h-[80vh] flex flex-col justify-start items-center p-4 overflow-y-auto bg-[#fbfcfd]">
       {orderData === null && <Spinner width="w-10" height="h-10"/>}
       {orderData?.message &&  <div className="w-full flex justify-start items-center gap-2">
         <span>{orderData.message}. </span>
@@ -43,6 +44,8 @@ export default function SuccesPage (){
       </>}
    
     </section>
+    </Suspense>
+  
   );
 }
 

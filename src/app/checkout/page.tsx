@@ -51,7 +51,7 @@ export default function CheckoutPage(){
         <section className="w-full h-[80dvh]  flex flex-col justify-center items-center  bg-secondary py-4">
      <div className="shadow-2xl w-[300px] flex flex-col justify-start items-center rounded-2xl pt-5 px-7 gap-7 bg-white">
       <form className="w-full flex flex-col justify-start items-center">
-        <h1 className="text-sm text-center font-semibold">Estas a punto de adquirir una consulta de "{atob(d)}".</h1>
+        <h1 className="text-sm text-center font-semibold">{`Estas a punto de adquirir una consulta de "${atob(d)}".`}</h1>
         <span className="text-xs text-center my-3">Por favor diligencia los siguientes datos para generar tu orden:</span>
         <div className="w-full flex justify-start items-center   h-[40px] rounded-lg"> 
         <select name="documentType" defaultValue={formValues.documentType.value} className="border h-full text-sm outline-none rounded-tl-lg rounded-bl-lg" onChange={(e)=>handleChange(e,"documentType")}>

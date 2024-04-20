@@ -9,7 +9,7 @@ export interface BoldStatusResponse {
     reference_id:     string;
     payment_method?:   string;
     payer_email?:      string;
-    transaction_date?: Date;
+    transaction_date?: string;
     payment_status:   PaymentStatus;
     error?:boolean,
     message?:string
